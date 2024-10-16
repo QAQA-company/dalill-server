@@ -1,3 +1,4 @@
 
 gateway/src/main/resources/application.yml
 user/src/main/resources/application.yml
+schedule/src/main/resources/application.yml
