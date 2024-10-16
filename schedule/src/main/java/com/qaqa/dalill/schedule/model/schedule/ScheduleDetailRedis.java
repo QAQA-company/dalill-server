@@ -1,23 +1,18 @@
 package com.qaqa.dalill.schedule.model.schedule;
 
 import com.qaqa.dalill.schedule.model.block.MemoBlock;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.redis.core.RedisHash;
 
 import java.util.List;
 import java.util.UUID;
 
-@Document(collation = "block")
-@Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class ScheduleDetail {
+@RedisHash("scheduleDetail")
+public class ScheduleDetailRedis {
     @Id
     private UUID uuid;
     @Indexed(unique = true)

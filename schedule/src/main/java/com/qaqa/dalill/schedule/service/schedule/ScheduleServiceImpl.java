@@ -2,8 +2,6 @@ package com.qaqa.dalill.schedule.service.schedule;
 
 import com.qaqa.dalill.schedule.model.response.CustomResponseEntity;
 import com.qaqa.dalill.schedule.model.schedule.Schedule;
-import com.qaqa.dalill.schedule.model.schedule.ScheduleDetail;
-import com.qaqa.dalill.schedule.repository.ScheduleDetailRepository;
 import com.qaqa.dalill.schedule.repository.ScheduleRepository;
 import com.qaqa.dalill.schedule.service.messaging.UserListener;
 import lombok.RequiredArgsConstructor;
