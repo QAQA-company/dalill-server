@@ -6,7 +6,7 @@ import com.qaqa.dalill.schedule.model.schedule.ScheduleDetail;
 import java.util.UUID;
 
 public interface ScheduleDetailService {
-    CustomResponseEntity save(ScheduleDetail scheduleDetail);
+    CustomResponseEntity save(UUID connector);
     void update(Object update);
     ScheduleDetail get(UUID uuid);
 }

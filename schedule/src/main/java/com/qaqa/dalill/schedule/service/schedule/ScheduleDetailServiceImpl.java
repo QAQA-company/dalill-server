@@ -17,7 +17,11 @@ public class ScheduleDetailServiceImpl implements ScheduleDetailService {
     private final ScheduleDetailMongoRepository mongoRepository;
 
     @Override
-    public CustomResponseEntity save(ScheduleDetail scheduleDetail) {
+    public CustomResponseEntity save(UUID connector) {
+        ScheduleDetail scheduleDetail = ScheduleDetail.builder()
+                .uuid(UUID.randomUUID())
+                .build();
+
         mongoRepository.save(scheduleDetail);
 
         return CustomResponseEntity.builder()

@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 import java.util.UUID;
 
-@Document(collation = "block")
+@Document(collection = "block")
 @Getter
 @Builder
 @NoArgsConstructor
@@ -21,6 +21,6 @@ public class ScheduleDetail {
     @Id
     private UUID uuid;
     @Indexed(unique = true)
-    private UUID connect_uuid;
-    private List<MemoBlock> memo_blocks;
+    private UUID connectUuid;
+    private List<MemoBlock> memoBlocks;
 }

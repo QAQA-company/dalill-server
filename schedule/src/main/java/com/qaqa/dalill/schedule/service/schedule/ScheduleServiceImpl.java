@@ -15,6 +15,7 @@ import java.util.UUID;
 public class ScheduleServiceImpl implements ScheduleService {
 
     private final ScheduleRepository scheduleRepository;
+    private final ScheduleDetailService scheduleDetailService;
     private final UserListener userListener;
 
     /**
@@ -35,6 +36,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                 .build();
 
         scheduleRepository.save(schedule);
+        scheduleDetailService.save(connector);
 
         return CustomResponseEntity.builder()
                 .status(201)

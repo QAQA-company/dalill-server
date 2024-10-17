@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface ScheduleDetailMongoRepository extends MongoRepository<ScheduleDetail, UUID> {
+    ScheduleDetail findByConnectUuid(String connect);
 }
